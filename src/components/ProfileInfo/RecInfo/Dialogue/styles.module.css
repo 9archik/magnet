@@ -1,0 +1,53 @@
+.container {
+  display: flex;
+  align-items: flex-end;
+  gap: 12px;
+}
+
+.circle {
+  background-color: var(--extra-bg-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  flex: 0 0 auto;
+}
+
+.dialogue {
+  border-radius: 8px;
+  background-color: var(--extra-bg-color);
+  padding: 6px 14px;
+  position: relative;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 21px; /* 131.25% */
+  letter-spacing: -0.6px;
+  margin: 12px 0 0 0;
+}
+
+.dialogue a {
+  color: white;
+  text-decoration: none;
+
+  position: relative;
+}
+
+.dialogue a::after {
+  position: absolute;
+  bottom: -1px;
+  content: "";
+  left: 5px;
+  right: 0;
+  background-color: white;
+  height: 1px;
+}
+
+.dialogue svg {
+  position: absolute;
+  bottom: -2px;
+  left: -7px;
+  transform: rotate(14deg);
+}
