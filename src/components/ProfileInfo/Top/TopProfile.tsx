@@ -3,7 +3,9 @@ import styles from "./styles.module.css";
 import { Button } from "@mui/material";
 import StarSVG from "../../../icons/StarSVG";
 import AvatarPNG from "../../../images/kostya.png";
+import { useState } from "react";
 const TopProfile = () => {
+  const [favActive, setFavActive] = useState(false);
   return (
     <div className={`container bp ${styles.container}`}>
       <div className={styles.match}>
@@ -11,9 +13,13 @@ const TopProfile = () => {
         <span>85%</span>
       </div>
 
-      <Avatar className={styles.avatar} src={AvatarPNG}  />
+      <Avatar className={styles.avatar} src={AvatarPNG} />
 
-      <Button variant="contained">
+      <Button
+        className={`${favActive && styles.active} ${styles.button}`}
+        onClick={() => setFavActive(!favActive)}
+        variant="contained"
+      >
         <StarSVG />
       </Button>
     </div>

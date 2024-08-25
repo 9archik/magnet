@@ -52,3 +52,9 @@ div.avatar {
     height: 90px;
   }
 }
+
+.active svg path {
+  fill: white;
+  fill-opacity: 1;
+}
+
