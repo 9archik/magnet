@@ -11,12 +11,14 @@ div.navbar {
   padding-bottom: 15px;
   padding-left: 10px;
   padding-right: 10px;
+  min-height: 79px;
   z-index: 1;
   margin-top: 40px;
 }
 
 div.navbar.ios {
   padding-bottom: 31px;
+  min-height: 90px;
 }
 
 .navbar button {
