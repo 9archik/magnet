@@ -4,6 +4,7 @@ import SearchSVG from "../../icons/SearchSVG";
 import StarSVG from "../../icons/StarSVG";
 import styles from "./styles.module.css";
 import { BottomNavigation, BottomNavigationAction } from "@mui/material";
+import { WebApp } from "../../constant/webapp";
 
 const GradientSVG = () => {
   return (
@@ -67,7 +68,10 @@ const BoltSVG = () => {
 
 const Navbar = () => {
   return (
-    <BottomNavigation className={styles.navbar} showLabels>
+    <BottomNavigation
+      className={`${styles.navbar} ${WebApp.platform === "ios" && styles.ios}`}
+      showLabels
+    >
       <BottomNavigationAction
         label="Профиль"
         icon={

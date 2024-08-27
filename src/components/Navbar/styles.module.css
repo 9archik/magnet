@@ -7,6 +7,14 @@ div.navbar {
   width: 100%;
   display: flex;
   justify-content: space-between;
+  align-items: flex-end;
+  padding-bottom: 15px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+div.navbar.ios {
+  padding-bottom: 31px;
 }
 
 .navbar button {
@@ -15,19 +23,48 @@ div.navbar {
   gap: 6px;
   font-size: 12px;
   padding: 0;
-  flex: 1 1 auto;
-  min-width: 0;
+
+  max-width: 77px;
+  min-width: 77px;
+
+  height: 46px;
 }
 
+@media (max-width: 380px) {
+  .navbar button {
+    max-width: 70px;
+    min-width: 70px;
+  }
 
+  .navbar button span {
+    font-size: 11px;
+  }
+}
 
 @media (max-width: 360px) {
   .navbar button span {
     font-size: 10px;
   }
+
+  .navbar button {
+    max-width: 70px;
+    min-width: 70px;
+  }
 }
 
-button.magnet {
+@media (max-width: 355px) {
+  .navbar button span {
+    font-size: 9px;
+    display: none;
+  }
+
+  .navbar button {
+    max-width: 45px;
+    min-width: 45px;
+  }
+}
+
+.navbar button.magnet {
   background-color: transparent;
   position: relative;
   cursor: pointer;
@@ -35,9 +72,8 @@ button.magnet {
   border: 0;
   width: 64px;
   height: 64px;
-  transform: translateY(-11px);
+  min-width: 64px;
   flex: 0 0 auto;
-  margin-right: -8px;
 }
 
 .gradient {
