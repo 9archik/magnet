@@ -11,6 +11,8 @@ div.navbar {
   padding-bottom: 15px;
   padding-left: 10px;
   padding-right: 10px;
+  z-index: 1;
+  margin-top: 40px;
 }
 
 div.navbar.ios {
